@@ -1,0 +1,21 @@
+* Archivo =2018-1.pdf=
+
+Este archivo fue encontrado el 03/31/2021 realizando la siguiente búsqueda en Google. El archivo fue descargado de [[https://xdoc.es/download/syllabus-computer-science-utec-pdf-free.html][este]] enlace.
+
+#+begin_example
+filetype:pdf "cs1102" "escribe un programa"
+#+end_example
+
+* Archivo =2019-1.pdf=
+
+Este archivo fue compartido por un usuario el día 25/8/2020 en el canal =#random-chat= del servidor de Discord de la carrera de Ciencia de la Computación de UTEC.
+
+* Archivo =2017-2.pdf=
+
+Este archivo fue encontrado el 3/31/2021 realizando la siguiente búsqueda en Google. El archivo fue descargado de [[https://cs.utec.edu.pe/assets/files/CS-UTEC-Plan2018.pdf][este]] enlace.
+
+#+begin_example
+"escuela profesional" "compendio de silabos" OR "libro de silabos" "2017" "utec"
+#+end_example
+
+La página que tenía este PDF era [[https://docplayer.es/146664942-Compendio-de-silabos-escuela-profesional-de-ciencia-de-la-computacion-2017-ii.html][esta]] y fue descargado de [[https://docplayer.es/storage/100/146664942/1617218787/ODcatHZWFG1yeW4AgL-LRw/146664942.pdf][este]] enlace.
