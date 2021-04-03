@@ -1,0 +1,103 @@
+* Objetivo
+
+El objetivo de este repositorio son
+
++ Satisfacer la necesidad de muchos estudiantes de querer ver el sílabo de un curso, ya sea porque lo planean llevar o lo quieren llevar.
++ Acercar a nuevos estudiantes a información que les permitirá tener una perspectiva más completa sobre la carrera Ciencia de la Computación enseñada en UTEC.
++ Almacenar los sílabos para así poder saber que temas fueron añadidos o eliminados a lo largo del tiempo.
+
+* Convenciones
+
+** Convenciones de nombramiento
+
+*** Nombre de carpetas
+
+Cada curso tiene una carpeta asignada y debe cumplir la siguiente notación
+
+#+begin_example
+{código} {nombre}
+#+end_example
+
+Donde
+
++ ={código}= es el código correspondiente del curso.
+  + Por ejemplo, el código del curso «Física II» y «Ciencia de los materiales» es «EN0021» y «AM0037», respectivamente.
++ ={nombre}= es el nombre correspondiente del curso presente en el último sílabo guardado.
+  + El nombre del curso debe ser aquel mostrado en los libros de sílabos.
+    + Algunos libros de sílabos tenían errores de ortografía. En dicho caso, se deben corregir los errores.
+    + Algunos estudiantes mencionan «Arquitectura de computadoras». Sin embargo, el nombre mostrado en los líbros de sílabos del 2017, 2018 y 2019 muestran la palabra «computadores» en vez de «computadoras».
+  + Este nombre únicamente puede contener carácteres en el rango =[a-zA-Z]=. Esto se hace para evitar [[https://github.com/gollum/gollum/issues/1269][problemas]] con Git en diferentes sistemas operativos.
+
+*** Capitalización de nombres de carpetas
+
+Se debe respetar las normas dictadas por la Real Academia Española en [[https://www.rae.es/dpd/may%C3%BAsculas][este]] artículo.
+
+#+begin_quote
+4.17. La primera palabra del título de cualquier obra de creación (libros, películas, cuadros, esculturas, piezas musicales, programas de radio o televisión, etc.); el resto de las palabras que lo componen, salvo que se trate de nombres propios, deben escribirse con minúscula: Últimas tardes con Teresa, La vida es sueño, La lección de anatomía, El galo moribundo, Las cuatro estaciones, Las mañanas de la radio, Informe semanal. En el caso de los títulos abreviados con que se conocen comúnmente determinados textos literarios, el artículo que los acompaña debe escribirse con minúscula: el Quijote, el Lazarillo, la Celestina.
+#+end_quote
+
+El bloque de abajo muestra algunos ejemplos donde se respeta esta regla.
+
+#+begin_example
+./CS4002-Proyecto-final-de-carrera-I/
+./CS1103-Programación-orientada-a-objetos-II/
+./CS2301-Redes-y-comunicaciones/
+#+end_example
+
+El bloque de abajo muestra algunos ejemplos donde *no* se respeta esta regla.
+
+#+begin_example
+./CS4002-Proyecto-Final-de-Carrera-I/
+./CS1103-Programación-Orientada-a-Objetos-II/
+./CS2301-Redes-y-Comunicaciones/
+#+end_example
+
+Discusión sobre este tema puede ser encontrado en [[https://spanish.stackexchange.com/questions/5678/existe-una-regla-para-el-uso-de-may%C3%BAsculas-en-t%C3%ADtulos][esta]] pregunta en Spanish Language Stack Exchange.
+
+*** Nombre de archivos
+
+Cada sílabo debe pertenecer a la carpeta de un curso y debe seguir la siguiente notación
+
+#+begin_example
+{año} {periodo} {lenguaje} {descripción}.pdf
+#+end_example
+
+Donde
+
++ ={año}= es el año en el que el curso fue enseñado.
++ ={periodo}= es el periodo en el que el curso fue enseñado. Los posibles valores son: 0, 1 y 2. El 0 representa el ciclo de verano, 1; el priemr semestre y 2; el segundo semestre.
++ ={lenguaje}= es el código ISO 639-2:1998 correspondiente al lenguaje utilizado en el sílabo.
+  + Hasta el momento, la universidad solo ha producido sílabos en inglés y español, los códigos ISO 639-2:1998 de estos lenguajes son: «eng» y «spa», respectivamente.
++ ={descripción}= es una corta descripción que explique como este sílabo fue obtenido.
+  + Los únicos valores permitidos, por el momento, son =libro= y =estudiante=.
+  + Es posible que durante un curso, el profesor pueda cambiar el sílabo de un curso, por esta razón varios estudiantes podrían subir el mismo sílabo. En ese caso, ={descripción}= debe ser =estudiante-{numero}= donde número es el menor número posible, empezando desde 1, que evitaría que se sobreescriba un archivo.
+
+Algunos ejemplos de esta notación se muestran abajo
+
+|-----------------------------+------+---------+----------+----------------------------------------------|
+| Nombre del archivo          |  Año | Periodo | Lenguaje | ¿De dónde fue obtenido?                      |
+|-----------------------------+------+---------+----------+----------------------------------------------|
+| 2017-1-eng-libro.pdf        | 2017 | Primero | Inglés   | Libro de sílabos del periodo correspondiente |
+| 2020-0-eng-libro.pdf        | 2020 | Verano  | Inglés   | Libro de sílabos del periodo correspondiente |
+| 2018-2-spa-estudiante-1.pdf | 2018 | Segundo | Español  | Obtenido de Canvas por estudiante            |
+| 2018-2-spa-estudiante-2.pdf | 2018 | Segundo | Español  | Obtenido de Canvas por estudiante            |
+| 2018-2-spa-estudiante-3.pdf | 2018 | Segundo | Español  | Obtenido de Canvas por estudiante            |
+|-----------------------------+------+---------+----------+----------------------------------------------|
+
+** Extensión de los archivos
+
+Si un silabo es encontrado con extensión =.docx=, entonces ese archivo y su conversión a =.pdf= deberá ser subido.
+
+Un archivo =.docx= puede ser convertido a =.pdf= utilizando Microsoft Word.
+
+Si estás en una distribución Linux y [[https://www.libreoffice.org/][LibreOffice]] se encuentra instalado en tu sistema, puedes convertir un archivo con extensión =.docx= a =.pdf= ejecutando
+
+#+begin_src dash
+libreoffice --convert-to pdf:writer_pdf_Export silabo.docx
+#+end_src
+
+Puedes encontrar más discusión sobre el uso de este comando en [[https://stackoverflow.com/questions/30349542/command-libreoffice-headless-convert-to-pdf-test-docx-outdir-pdf-is-not][esta]] esta pregunta de Stack Overflow.
+
+* Contribuciones
+
+Si tienes algún sílabo que no se encuentre en esta carpeta, puedes contribuir al repositorio subiendo el archivo mediante un /pull request/.
