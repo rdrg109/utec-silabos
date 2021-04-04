@@ -15,7 +15,7 @@ El objetivo de este repositorio son
 Cada curso tiene una carpeta asignada y debe cumplir la siguiente notación
 
 #+begin_example
-{código} {nombre}
+{código}-{nombre}
 #+end_example
 
 Donde
